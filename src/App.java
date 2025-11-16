@@ -11,7 +11,7 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
-        stage.setTitle("Traffic Management System");
+        stage.setTitle("Traffic Violation");
         stage.show();
     }
 
