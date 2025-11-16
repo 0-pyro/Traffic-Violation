@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/20"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="DashboardController">
+
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #2F4F4F; -fx-padding: 15;">
+            <Button text="New Ticket" onAction="#openTicketCreationWindow" maxWidth="120" />
+            <Button text="Tickets" onAction="#showTickets" maxWidth="120" />
+            <Button text="Offenders" onAction="#showOffenders" maxWidth="120"/>
+            <Button text="Vehicles" onAction="#showVehicles" maxWidth="120"/>
+            <Button text="Licenses" onAction="#showLicenses" maxWidth="120"/>
+        </VBox>
+    </left>
+
+    <center>
+        <AnchorPane fx:id="contentArea" />
+    </center>
+
+</BorderPane>

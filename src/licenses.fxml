@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="LicenseController"
+      spacing="10" style="-fx-padding: 20;">
+
+    <Label text="Driving Licenses" style="-fx-font-size: 20px; -fx-font-weight:bold;" />
+
+    <TableView fx:id="licenseTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colLicenseNo" text="License No." prefWidth="120"/>
+            <TableColumn fx:id="colOffenderId" text="Offender ID" prefWidth="120"/>
+            <TableColumn fx:id="colAge" text="Age" prefWidth="100"/>
+            <TableColumn fx:id="colPhone" text="Phone" prefWidth="150"/>
+            <TableColumn fx:id="colValidity" text="Valid" prefWidth="80"/>
+            <TableColumn fx:id="colType" text="Type" prefWidth="100"/>
+            <TableColumn fx:id="colAddress" text="Address" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+</VBox>

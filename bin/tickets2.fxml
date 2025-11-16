@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="TicketController"
+      spacing="10" style="-fx-padding: 20;">
+
+    <Label text="Tickets" style="-fx-font-size: 20px; -fx-font-weight:bold;" />
+
+    <TableView fx:id="ticketTable" prefHeight="300">
+        <columns>
+            <TableColumn text="Ticket ID" prefWidth="100"/>
+            <TableColumn text="Offender" prefWidth="150"/>
+            <TableColumn text="Vehicle" prefWidth="150"/>
+            <TableColumn text="Amount" prefWidth="100"/>
+            <TableColumn text="Date" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,12 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  
+
+
+
+    
+  
+  "java.debug.settings.vmArgs": "--module-path \"D:\\JAVAFX\\lib\" --add-modules javafx.controls,javafx.fxml",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC"
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="OffenderController"
+      spacing="10" style="-fx-padding: 20;">
+
+    <Label text="Offenders" style="-fx-font-size: 20px; -fx-font-weight:bold;" />
+
+    <TableView fx:id="offenderTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colOffenderId" text="Offender ID" prefWidth="120"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="200"/>
+            <TableColumn fx:id="colLicenseId" text="License ID" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox>

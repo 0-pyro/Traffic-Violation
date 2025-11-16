@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="newTicketController"
+      spacing="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5;">
+
+    <Label text="Create New Ticket" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="8">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="120"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="220"/>
+            <ColumnConstraints minWidth="80"/>
+        </columnConstraints>
+
+        <Label text="Officer ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="officerIdField" promptText="Officer ID" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Offender ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="offenderIdField" promptText="Offender ID" onAction="#handleCheckOffender" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Button text="Check/Auto-fill" onAction="#handleCheckOffender" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+        <Label text="License ID:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="licenseIdField" editable="false" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="License Type:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="licenseTypeField" editable="false" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="License Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="licenseAddressField" editable="false" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="License Age:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="licenseAgeField" editable="false" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="License Phone:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="licensePhoneField" editable="false" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Vehicle No.:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="vehicleNumberField" promptText="Vehicle Number" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <Label text="City:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextField fx:id="cityField" promptText="City" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+        <Label text="Town:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <TextField fx:id="townField" promptText="Town" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+        <Label text="Road:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+        <TextField fx:id="roadField" promptText="Road" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+        <Label text="Penalty:" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+        <TextField fx:id="penaltyField" promptText="Penalty description" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+        <Label text="Violation:" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+        <TextField fx:id="violationField" promptText="Violation description" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+
+        <Label text="Amount (fee):" GridPane.rowIndex="13" GridPane.columnIndex="0"/>
+        <TextField fx:id="feeField" promptText="Numeric amount" GridPane.rowIndex="13" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Create Ticket" onAction="#handleCreateTicket" />
+    </HBox>
+
+</VBox>

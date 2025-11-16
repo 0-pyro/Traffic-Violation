@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="TicketController"
+      spacing="10" style="-fx-padding: 20;">
+
+    <Label text="Tickets" style="-fx-font-size: 20px; -fx-font-weight:bold;" />
+
+    <TableView fx:id="ticketTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colTicketId" text="Ticket ID" prefWidth="80"/>
+            <TableColumn fx:id="colOfficerId" text="Officer ID" prefWidth="100"/>
+            <TableColumn fx:id="colOffender" text="Offender ID" prefWidth="100"/>
+            <TableColumn fx:id="colVehicle" text="Vehicle" prefWidth="120"/>
+            <TableColumn fx:id="colCity" text="City" prefWidth="100"/>
+            <TableColumn fx:id="colTown" text="Town" prefWidth="100"/>
+            <TableColumn fx:id="colRoad" text="Road" prefWidth="100"/>
+            <TableColumn fx:id="colViolation" text="Violation" prefWidth="120"/>
+            <TableColumn fx:id="colPenalty" text="Penalty" prefWidth="120"/>
+            <TableColumn fx:id="colAmount" text="Amount" prefWidth="80"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox>
