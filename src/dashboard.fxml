@@ -7,6 +7,12 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="DashboardController">
 
+    <top>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 8 12 8 12; -fx-background-color: #eaeaea; -fx-border-color: #cccccc; -fx-border-width: 0 0 1 0;">
+            <Label fx:id="loggedInLabel" text="Logged in: -" style="-fx-font-size: 12px;" />
+        </HBox>
+    </top>
+
     <left>
         <VBox spacing="10" style="-fx-background-color: #2F4F4F; -fx-padding: 15;">
             <Button text="New Ticket" onAction="#openTicketCreationWindow" maxWidth="120" />

@@ -9,9 +9,22 @@ public class DrivingLicense {
     String address, type;
     String sql = "INSERT INTO driving_license (license_id, age, phone, validity, type, address) VALUES (?, ?, ?, ?, ?, ?)";
 
+    // Constructor with offender_id (for newTicketController)
     public DrivingLicense(int id, int offender_id, int age, long phone, boolean validity, String address, String type) {
         this.id = id;
         this.offender_id = offender_id;
+        this.age = age;
+        this.phone = phone;
+        this.validity = validity;
+        this.address = address;
+        this.type = type;
+        insert();
+    }
+
+    // Constructor without offender_id
+    public DrivingLicense(int id, int age, long phone, boolean validity, String address, String type) {
+        this.id = id;
+        this.offender_id = 0;
         this.age = age;
         this.phone = phone;
         this.validity = validity;
@@ -83,7 +96,7 @@ public class DrivingLicense {
             while (rs.next()) {
                 DrivingLicense dl = new DrivingLicense(
                         rs.getInt("license_id"),
-                        rs.getInt("offender_id") == 0 ? 0 : rs.getInt("offender_id"), // handle null/0
+                        rs.getInt("offender_id") == 0 ? 0 : rs.getInt("offender_id"),
                         rs.getInt("age"),
                         rs.getLong("phone"),
                         rs.getBoolean("validity"),
